@@ -22,8 +22,6 @@ if CURRENT_PYTHON < MIN_PYTHON:
 with open('VERSION') as f:
     VERSION = f.read().strip()
 
-
-
 setup(
     name='navigation',
     version=VERSION,
@@ -34,9 +32,11 @@ setup(
     license='',
     packages=[package for package in find_packages() if package.startswith('navigation')],
     zip_safe=False,
-    install_requires=['numpy'],
-    python_requires='>3.4',
+    # install_requires=install_requires,
+    # tests_require=['pytest', 'mock'],
+    python_requires='>=3.4',
     classifiers=[
+            'Programming Language :: Python :: 3.4',
             'Programming Language :: Python :: 3.5',
             'Programming Language :: Python :: 3.6',
             'Programming Language :: Python :: 3.7',
